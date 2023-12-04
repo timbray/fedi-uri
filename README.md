@@ -32,10 +32,10 @@ The URI identifying the #fediverse hashtag would be `fedi://hashtag/fediverse` a
 
 When a Web user-agent (including mobile Fediverse apps) encounters a "fedi" URI, the following would be an appropriate series of actions:
 
-The user agent notices the scheme and dispatches to a scheme-specific module that knows how to handle these URIs.
-That module would ascertain whether there is an active local Fediverse client and, if so, how to send requests to such a client. This document does not specify how this task is to be accomplished. On both Web browsers and mobile operating systems, it is possible to install scheme-selected protocol handlers, but other methods for doing this can be imagined.
-The module would dispatch the information in the URI to the local Fediverse client. This document does not specifiy the interface between the user-agent module and the Fediverse client. Probably the simplest way to accomplish this is simply to send the URI as received, but other methods can be imagined.
-The local Fediverse client would present the Fediverse account or post to the user, and allow interaction with it.
+1. The user agent notices the scheme and dispatches to a scheme-specific module that knows how to handle these URIs.
+2. That module would ascertain whether there is an active local Fediverse client and, if so, how to send requests to such a client. This document does not specify how this task is to be accomplished. On both Web browsers and mobile operating systems, it is possible to install scheme-selected protocol handlers, but other methods for doing this can be imagined.
+3. The module would dispatch the information in the URI to the local Fediverse client. This document does not specifiy the interface between the user-agent module and the Fediverse client. Probably the simplest way to accomplish this is simply to send the URI as received, but other methods can be imagined.
+4. The local Fediverse client would present the Fediverse account or post to the user, and allow interaction with it.
 
 ## Syntax of "fedi" URIs
 
