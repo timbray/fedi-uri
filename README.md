@@ -14,21 +14,21 @@ The terms MUST and SHOULD are used in IETF style.
 
 ## Fediverse URIs In An HTTP World
 
-Suppose that Ash has an account on a Fediverse instance at example.com. Their account would conventionally be identified in Fediverse messages as "@ash@example.com". Suppose Ash successfully posts a cat photo to their Fediverse account. From the HTTP point of view, its URI might be "https://example.com/@ash/111506589124254741". Suppose Lee has a Fediverse account at example.org, and follows Ash. Lee's Fediverse client would display Ash's post and allow Lee to boost it, reply to it, like it, mute or block Ash, and so on.
+Suppose that Ash has an account on a Fediverse instance at example.com. Their account would conventionally be identified in Fediverse messages as `@ash@example.com`. Suppose Ash successfully posts a cat photo to their Fediverse account. From the HTTP point of view, its URI might be `https://example.com/@ash/111506589124254741`. Suppose Lee has a Fediverse account at example.org, and follows Ash. Lee's Fediverse client would display Ash's post and allow Lee to boost it, reply to it, like it, mute or block Ash, and so on.
 
 Suppose that Lee wants to share the post with their friend Pat so, using their Web browser, copies the URI and emails it to Pat. When Pat clicks on it, they will be taken to example.com and see the post. Even though Pat has a Fediverse account at example.net, because the browser is not a Fediverse client, they will not be able to boost, reply, or otherwise interact with it.
 
 In this situation, Pat can copy the URI, paste it into their Fediverse client's "search" field, and eventually be able to interact with it, but this is non-intuitive and shouldn't be necessary.
 
-This problem applies to URIs for accounts as well as posts. Should Lee email Pat saying "You should follow https://example.com/@ash", Pat won't be able to use that URI easily.
+This problem applies to URIs for accounts as well as posts. Should Lee email Pat saying "You should follow `https://example.com/@ash`", Pat won't be able to use that URI easily.
 
 The "fedi" URI scheme described here is designed to help solve both these problems.
 
 ## Using "fedi" URIs
 
-Given the "fedi" scheme, the URI for Ash's account would be "fedi://ash@example.com/" and for their cat picture, "fedi://ash@example.com/111506589124254741".
+Given the "fedi" scheme, the URI for Ash's account would be `fedi://ash@example.com/` and for their cat picture, `fedi://ash@example.com/111506589124254741`.
 
-The URI identifying the #fediverse hashtag would be "fedi://hashtag/fediverse" and the URI identifying a search for "calico cat" would be "fedi://search/calico%20cat".
+The URI identifying the #fediverse hashtag would be `fedi://hashtag/fediverse` and the URI identifying a search for "calico cat" would be `fedi://search/calico%20cat`.
 
 When a Web user-agent (including mobile Fediverse apps) encounters a "fedi" URI, the following would be an appropriate series of actions:
 
