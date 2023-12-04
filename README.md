@@ -16,7 +16,7 @@ The terms MUST and SHOULD are used in IETF style.
 
 Suppose that Ash has an account on a Fediverse instance at example.com. Their account would conventionally be identified in Fediverse messages as `@ash@example.com`. Suppose Ash successfully posts a cat photo to their Fediverse account. From the HTTP point of view, its URI might be `https://example.com/@ash/111506589124254741`. Suppose Lee has a Fediverse account at example.org, and follows Ash. Lee's Fediverse client would display Ash's post and allow Lee to boost it, reply to it, like it, mute or block Ash, and so on.
 
-Suppose that Lee wants to share the post with their friend Pat so, using their Web browser, copies the URI and emails it to Pat. When Pat clicks on it, they will be taken to example.com and see the post. Even though Pat has a Fediverse account at example.net, because the browser is not a Fediverse client, they will not be able to boost, reply, or otherwise interact with it.
+Suppose that Lee wants to share the post with their friend Pat so, using their Web browser, Lee copies the URI and emails it to Pat. When Pat clicks on it, they will be taken to example.com and see the post. Even though Pat has a Fediverse account at example.net, because the browser is not a Fediverse client, they will not be able to boost, reply, or otherwise interact with it.
 
 In this situation, Pat can copy the URI, paste it into their Fediverse client's "search" field, and eventually be able to interact with it, but this is non-intuitive and shouldn't be necessary.
 
@@ -39,13 +39,13 @@ When a Web user-agent (including mobile Fediverse apps) encounters a "fedi" URI,
 
 ## Syntax of "fedi" URIs
 
-This section specifies the syntax of "fedi" URIs using the terms "Scheme", "Authority", "User Information", "Host", "Port", "Path", "Query", and "Fragment", as specified in RFC3986].
+This section specifies the syntax of "fedi" URIs using the terms "Scheme", "Authority", "User Information", "Host", "Port", "Path", "Query", and "Fragment", as specified in RFC3986.
 
 The Scheme of a "fedi" URI MUST be "fedi".
 
 There are two kinds of "fedi" URIs: Account-based and account-free.
 
-In an account-based "fedi" URI, the Authority MUST include User Information whose value is an account name (the "Account") on a Fediverse instance (the "Instance"), and the Host must identify the Instance as described in section 3.2 of RFC3986. The Authority MUST NOT include a Port. In an account-based "fedi" URI, if a Path component is present, its value SHOULD be the unique identifier of a post by the Author on the Instance. Such a URI identifies an individual post on the Instance. This document does not limit the syntax of the Path beyond the constraints described in RFC3986.
+In an account-based "fedi" URI, the Authority MUST include User Information whose value is an account name (the "Author") on a Fediverse instance (the "Instance"), and the Host must identify the Instance as described in section 3.2 of RFC3986. The Authority MUST NOT include a Port. In an account-based "fedi" URI, if a Path component is present, its value SHOULD be the unique identifier of a post by the Author on the Instance. Such a URI identifies an individual post on the Instance. This document does not limit the syntax of the Path beyond the constraints described in RFC3986.
 
 If an account-based "fedi" URI does not contain a Path, it identifies the Author's account.
 
